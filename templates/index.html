@@ -1,0 +1,35 @@
+·{% extends "layout.html" %}
+
+{% block title %}
+   portfolio
+{% endblock %}
+
+{% block main %}
+    <h2>Portfolio</h2>
+    <table Class = "table table-bordered table-striped">
+        <thead Class ="thead-light">
+        <tr>
+            <th>symbol</th>
+            <th>price</th>
+            <th>shares</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tboday>
+            {%for transaction in transactionss %}
+            <tr>
+                <td>{{transaction.symbol}}</td>
+                <td>{{transaction.price}}</td>
+                <td>{{transaction.share_now}}</td>
+                <td>{{transaction.value}}</td>
+            </tr>
+            {%endfor%}
+            <tr>
+                <td colspan = "4" align = "right">Total Value</td>
+                <td>{{total}}</td>
+            </tr>
+
+        </tboday>
+
+    </table>
+{% endblock %}

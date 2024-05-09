@@ -1,0 +1,9 @@
+·{% extends "layout.html" %}
+
+{% block title %}
+    sold
+{% endblock %}
+
+{% block main %}
+ <p>you have sold  ({{ symbol }}) {{share}}shares at price {{ price | usd }}.</p>
+{% endblock %}

@@ -1,0 +1,34 @@
+·{% extends "layout.html" %}
+
+{% block title %}
+   history
+{% endblock %}
+
+{% block main %}
+    <h2>History</h2>
+    <table Class = "table table-bordered table-striped">
+        <thead Class ="thead-light">
+        <tr>
+            <th>symbol</th>
+            <th>price</th>
+            <th>shares</th>
+            <th>time</th>
+            <th>sell/buy</th>
+        </tr>
+        </thead>
+        <tboday>
+            {%for transaction in transactions %}
+            <tr>
+                <td>{{transaction.symbol}}</td>
+                <td>{{transaction.shares}}</td>
+                <td>{{transaction.price}}</td>
+                <td>{{transaction.time}}</td>
+                <td>{{transaction.sell_or_buy}}</td>
+                
+            </tr>
+            {%endfor%}
+
+        </tboday>
+
+    </table>
+{% endblock %}
